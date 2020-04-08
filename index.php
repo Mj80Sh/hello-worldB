@@ -11,7 +11,7 @@ header("Content-type: application/json; charset=utf-8");
 header("Access-Control-Allow-Origin: *");
 
 // Set the bot TOKEN
-$bot_token = '979191276:AAEda6Rai7LWRxjaH4mfUBNWwUcnT1-1doc';
+$bot_token = 'BotToken';
 // Instances the class
 $telegram = new Telegram($bot_token);
 
@@ -19,10 +19,10 @@ $text = $telegram->Text();
 $chat_id = $telegram->ChatID();
 
 $servername = "localhost";
-$username = "tlbotir1_root";
-$password = "o.*E%D@.yG+x";
-$dbname = "tlbotir1_shagh";
-$TBname='shagh';
+$username = "root";
+$password = "";
+$dbname = "DBname";
+$TBname='TBname';
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -32,7 +32,7 @@ if(isset($_GET['timer']))
 if($_GET['timer'])
 {
    
-    $sql = "SELECT DISTINCT Uid FROM shagh";
+    $sql = "SELECT DISTINCT Uid FROM $TBname";
     $result = mysqli_query($conn, $sql);
     
     if (mysqli_num_rows($result) > 0) {
@@ -53,7 +53,7 @@ if($_GET['timer'])
             $time=time();
             $UID=$uid['Uid'];
             $name='';
-            $sql = "INSERT INTO shagh (Uid,name, time,MSG) VALUES ($UID,'$name', $time,$id)";
+            $sql = "INSERT INTO $TBname (Uid,name, time,MSG) VALUES ($UID,'$name', $time,$id)";
             $conn->query($sql);
            
         }
@@ -70,7 +70,7 @@ if ($callback_query !== null && $callback_query != '') {
     $data=$telegram->Callback_Data();
     $id=$telegram->Callback_ChatID();
     if($data!=8){
-    $sql = "UPDATE shagh  SET name='$Fname',value=$data WHERE MSG=$MSG";
+    $sql = "UPDATE $TBname  SET name='$Fname',value=$data WHERE MSG=$MSG";
     $conn->query($sql);
     }
     if($data==8)
@@ -82,7 +82,7 @@ if ($callback_query !== null && $callback_query != '') {
 
 
 
-    $sql = "SELECT * FROM shagh WHERE MSG=$MSG";
+    $sql = "SELECT * FROM $TBname WHERE MSG=$MSG";
     $result = mysqli_query($conn, $sql);
     $time = mysqli_fetch_array($result)['time'];
 
@@ -139,7 +139,7 @@ if ($callback_query !== null && $callback_query != '') {
 
 if(isset($_GET['startDate'])&& isset($_GET['endDate'])){
 
-$db=new PDO('mysql:dbname=tlbotir1_shagh;host=localhost;','tlbotir1_root','o.*E%D@.yG+x');  
+$db=new PDO("mysql:dbname=$dbname;host=$servername;",$TBname,$password);  
 //here prepare the query for analyzing, prepared statements use less resources and thus run faster  
 $s=$_GET['startDate'];
 $e=$_GET['endDate'];
