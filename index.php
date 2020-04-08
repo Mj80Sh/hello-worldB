@@ -75,8 +75,9 @@ if ($callback_query !== null && $callback_query != '') {
     }
     if($data==8)
     {
-    $content = ['callback_query_id' => $telegram->Callback_ID(), 'text' => 'قبلا ثبت شده داداش!', 'show_alert' => true];
-    $telegram->answerCallbackQuery($content);
+    // $content = ['callback_query_id' => $telegram->Callback_ID(), 'text' => 'قبلا ثبت شده داداش!', 'show_alert' => true];
+    // $telegram->answerCallbackQuery($content);
+    $data=4;
     }
 
 
