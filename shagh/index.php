@@ -88,43 +88,43 @@ if ($callback_query !== null && $callback_query != '') {
 
     if($data==0){
     $option = array( 
-        array($telegram->buildInlineKeyBoardButton("خواب✅",  $url = '', $callback_data = '8'),
-              $telegram->buildInlineKeyBoardButton("خوابالو",   $url = '', $callback_data = '8')),
-        array($telegram->buildInlineKeyBoardButton("آماده به کار",  $url = '', $callback_data = '8'),
-              $telegram->buildInlineKeyBoardButton("زده بالا",   $url = '', $callback_data = '8')),
-        array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم",  $url = '', $callback_data = '8')));
+        array($telegram->buildInlineKeyBoardButton("خواب✅",  $url = '', $callback_data = '0'),
+              $telegram->buildInlineKeyBoardButton("خوابالو",   $url = '', $callback_data = '1')),
+        array($telegram->buildInlineKeyBoardButton("آماده به کار",  $url = '', $callback_data = '2'),
+              $telegram->buildInlineKeyBoardButton("زده بالا",   $url = '', $callback_data = '3')),
+        array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم",  $url = '', $callback_data = '4')));
     }
     if($data==1){
     $option = array( 
-        array($telegram->buildInlineKeyBoardButton("خواب",  $url = '', $callback_data = '8'),
-            $telegram->buildInlineKeyBoardButton("خوابالو✅",   $url = '', $callback_data = '8')),
-        array($telegram->buildInlineKeyBoardButton("آماده به کار",  $url = '', $callback_data = '8'),
-            $telegram->buildInlineKeyBoardButton("زده بالا",   $url = '', $callback_data = '8')),
-        array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم",  $url = '', $callback_data = '8')));
+        array($telegram->buildInlineKeyBoardButton("خواب",  $url = '', $callback_data = '0'),
+            $telegram->buildInlineKeyBoardButton("خوابالو✅",   $url = '', $callback_data = '1')),
+            array($telegram->buildInlineKeyBoardButton("آماده به کار",  $url = '', $callback_data = '2'),
+            $telegram->buildInlineKeyBoardButton("زده بالا",   $url = '', $callback_data = '3')),
+      array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم",  $url = '', $callback_data = '4')));
     }
     if($data==2){
         $option = array( 
-            array($telegram->buildInlineKeyBoardButton("خواب",  $url = '', $callback_data = '8'),
-                $telegram->buildInlineKeyBoardButton("خوابالو",   $url = '', $callback_data = '8')),
-            array($telegram->buildInlineKeyBoardButton("آماده به کار✅",  $url = '', $callback_data = '8'),
-                $telegram->buildInlineKeyBoardButton("زده بالا",   $url = '', $callback_data = '8')),
-            array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم",  $url = '', $callback_data = '8')));
+            array($telegram->buildInlineKeyBoardButton("خواب",  $url = '', $callback_data = '0'),
+                $telegram->buildInlineKeyBoardButton("خوابالو",   $url = '', $callback_data = '1')),
+            array($telegram->buildInlineKeyBoardButton("آماده به کار✅",  $url = '', $callback_data = '2'),
+            $telegram->buildInlineKeyBoardButton("زده بالا",   $url = '', $callback_data = '3')),
+            array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم",  $url = '', $callback_data = '4')));
         }
     if($data==3){
     $option = array( 
-        array($telegram->buildInlineKeyBoardButton("خواب",  $url = '', $callback_data = '8'),
-            $telegram->buildInlineKeyBoardButton("خوابالو",   $url = '', $callback_data = '8')),
-        array($telegram->buildInlineKeyBoardButton("آماده به کار",  $url = '', $callback_data = '8'),
-            $telegram->buildInlineKeyBoardButton("زده بالا✅",   $url = '', $callback_data = '8')),
-        array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم",  $url = '', $callback_data = '8')));
+        array($telegram->buildInlineKeyBoardButton("خواب",  $url = '', $callback_data = '0'),
+                $telegram->buildInlineKeyBoardButton("خوابالو",   $url = '', $callback_data = '1')),
+        array($telegram->buildInlineKeyBoardButton("آماده به کار",  $url = '', $callback_data = '2'),
+            $telegram->buildInlineKeyBoardButton("زده بالا✅",   $url = '', $callback_data = '3')),
+        array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم",  $url = '', $callback_data = '4')));
     }
     if($data==4){
         $option = array( 
-            array($telegram->buildInlineKeyBoardButton("خواب",  $url = '', $callback_data = '8'),
-                $telegram->buildInlineKeyBoardButton("خوابالو",   $url = '', $callback_data = '8')),
-            array($telegram->buildInlineKeyBoardButton("آماده به کار",  $url = '', $callback_data = '8'),
-                $telegram->buildInlineKeyBoardButton("زده بالا",   $url = '', $callback_data = '8')),
-            array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم✅",  $url = '', $callback_data = '8')));
+            array($telegram->buildInlineKeyBoardButton("خواب",  $url = '', $callback_data = '0'),
+                $telegram->buildInlineKeyBoardButton("خوابالو",   $url = '', $callback_data = '1')),
+            array($telegram->buildInlineKeyBoardButton("آماده به کار",  $url = '', $callback_data = '2'),
+                $telegram->buildInlineKeyBoardButton("زده بالا",   $url = '', $callback_data = '3')),
+            array($telegram->buildInlineKeyBoardButton("میخوام بزززززززززنم✅",  $url = '', $callback_data = '4')));
     }
 
     $keyb = $telegram->buildInlineKeyBoard($option);
